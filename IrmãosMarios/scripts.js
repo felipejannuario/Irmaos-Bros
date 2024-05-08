@@ -19,4 +19,4 @@ function ajustarVolume(volume) {
   }
 
   // Ajuste de volume inicial
-  ajustarVolume(0.2); // Define o volume inicial para 20%
+  ajustarVolume(0.50); // Define o volume inicial para 20%
