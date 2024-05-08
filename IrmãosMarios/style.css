@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    /* com esse tag geral aplicamos uma ordem pra definir direto a configurção inicial*/
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.logo-mario {
+    height: 200px;
+    /*A propriedade height do CSS determina a altura da área do conteúdo de um elemento*/
+}
+
+button {
+    color: white;
+    /*A propriedade color do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos)*/
+    background-color: #C51111;
+    /*A propriedade color do CSS definine o valor da cor de um elemento com seu conteúdo em texto e seus decorações (estilos)*/
+    border-radius: 3px;
+    /*Podemos também utilizar propriedades e atributos adicionais para estilizar bordas. border-radius : Esta propriedade permite arredondar as bordas de um elemento.*/
+    border: none;
+    /*O CSS border é uma propriedade que define uma borda em um elemento HTML*/
+    width: 200px;
+    /* A propriedade CSS width determina a largura da área de conteúdo de um elemento. A área de conteúdo fica dentro do preenchimento, da borda, e da margem de um elemento.*/
+    height: 50px;
+    cursor: pointer;
+    /*A propriedade CSS cursor especifica o cursor do mouse mostrado quando o ponteiro do mouse está sobre um elemento.*/
+    text-transform: uppercase;
+    /* A propriedade CSS transform permite modificar o espaço coordenado do modelo de formatação CSS. Usando-a, elementos podem ser traduzidos, rotacionados, ter seu tamanho ajustado e inclinados de acordo com os valores definidos.*/
+    font-weight: bold;
+    /*A propriedade CSS font-weight especifica o peso ou a intensidade da fonte (ex.: negrito). Algumas fontes oferecem apenas as opções normal e negrito.*/
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+button:hover {
+    color: white;
+    background: #18F80F;
+    font-size: 15px;
+    transition: 0.5s ease-in-out;
+}
+
+
+.imagem-mario-luigi {
+    height: 500px;
+}
+
+body {
+    height: 30vw;
+}
+
+.caixa-principal {
+    width: 40%;
+}
+
+.caixa-video {
+    position: fixed;
+    /*define como um elemento pode ser posicionado (renderizado) no documento (página).*/
+    top: 0;
+    z-index: -1;
+    /*A propriedade Z-index especifica a ordem da pilha de um elemento do anúncio. Um elemento com número de ordem de empilhamento superior será exibido à frente de outro com número inferior. Os possíveis problemas com o Z-index incluem: problemas de shine-through.*/
+}
+
+video {
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+}
+
+.mascara {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    position: fixed;
+    top: 0;
+}
+
+.caixa-mae {
+    display: flex;
+    /*O display: flex funciona de uma maneira diferente dos outros displays. Quando colocamos essa propriedade em um elemento, esse elemento se torna um flex container, a partir daí podemos manipular todos os elementos filhos desse flex container com propriedades novas.*/
+    align-items: center;
+    /*e o alinhamento dos inteis permitido alinha de acordo com minha  necessidade*/
+    justify-content: space-around;
+    /*justify-content: Esta é uma propriedade CSS que controla o alinhamento dos itens flexíveis ao longo do eixo principal do contêiner flexível. No caso de justify-content, o eixo principal é o eixo horizontal.
+
+    space-around: Este é um valor válido para a propriedade justify-content. Ele distribui o espaço disponível ao redor dos itens flexíveis de maneira uniforme. Isso significa que haverá um espaço igual entre os itens e também nas extremidades do contêiner.*/
+    padding: 40px;
+    /*o padding e o espaçamento interno dos meus itens alinhando eles dentro da divs*/
+    height: 50vw;
+    /* a medida em vw ocupa a tela inteira, o valor não muda sempre sera o mesmo tamanho indempedente do tamanho da tela*/
+}
+
+.link-whatsapp img {
+    height: 60px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 30pxs;
+}
+
+.header img {
+    height: 80px;
+    margin: 20px;
+}
+
+.header a {
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.header a:hover {
+    color: #C51111;
+    font-size: 26px;
+    transition: 0.5s ease-in-out;
+}
+
+.formulario-fale-conosco {
+    background-color: white;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    position: fixed;
+    top: 30%;
+    left: -300px;
+    padding: 20px;
+    border-radius: 5px;
+    transition: left 1s ease-in-out;
+    }
+
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding-left: 5px;
+    outline-color: #C51111;
+    cursor: pointer;
+}
+
+textarea {
+    width: 270px;
+    height: 100px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+    outline-color: #C51111;
+    cursor: pointer;
+
+}
+
+.mascara-formulario {
+    visibility: hidden;
+    transition: visibility 1s linear;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+    transition: left 1s ease-in-out;
+}
+
+/* 
+     inicial
+            top:30%;
+            left:-300px;
+
+     final
+            top:30%;
+            left: 50%;
+            transform: translateX(-50%);     
+*/
