@@ -1,4 +1,74 @@
-* {
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços</title>
+</head>
+
+<body>
+
+    
+    <div class="header">
+        <img src="img/logo-header.png" alt="logo dos irmãos mario">
+        <a href="index.html">Home</a>
+        <a href="nossos-servicos.html">Nossos Serviços</a>
+        <a href="fale-consco.html">Fale Conosco</a>
+    </div>
+
+    
+    <div class="caixa-mae">
+        <div class="caixa-principal">
+            <img src="img/logo.png" alt="Logo do mario bros" class="logo-mario">
+            <h1>Conserto de Vazamentos Rápido e Eficiente - Seu Encanamento em Boas Mãos!</h1>
+            
+            <p>Benefícios do Serviço:<br>
+                .Reparos rápidos e eficientes para resolver seus problemas hidráulicos.<br>
+                .Equipe experiente e qualificada pronta para atender às suas necessidades.<br>
+                .Atendimento 24 horas para emergências.<br>
+                .Garantia de qualidade em todos os serviços prestados.<br>
+                .Preços competitivos e transparência nas cobranças. </p>
+            <p>            
+                Promoção Especial:
+                💰 Oferta Especial: Desconto de 10% para Novos Clientes!
+
+            </p>
+                
+            <p>    Depoimentos de Clientes:
+                "Contratei o serviço de conserto de vazamentos e fiquei impressionado com a rapidez e eficiência da equipe. Recomendo!" - João S.
+            </p>    
+            <p>    Imagens Relevantes:
+                [Inserir imagens da equipe em ação, equipamentos utilizados, antes e depois de consertos, etc.]
+            </p>    
+                
+            <button onclick="mostrarForm()">Entre em Contato</button>
+            <a href="https://wa.me/5524999348767?text=Irm%C3%A3os+Marios+quero+sua+ajuda%21" target="_blank"
+                class="link-whatsapp"><img src="img/whatsapp.png" alt="link para whatsapp" /></a>
+        </div>
+        <div>
+            <img src="img/mario.png" alt="Logo do mario e luigi" class="imagem-mario-luigi">
+        </div>
+    </div>
+
+    <div class="caixa-video">
+        <video src="img/video.mp4" autoplay muted loop></video>
+        <div class="mascara"></div>
+    </div>
+
+    <form class="formulario-fale-conosco"  action="https://formcarry.com/s/c2NY_nLdwf5"
+    method="POST"
+    enctype="multipart/form-data">
+        <input placeholder="Seu Nome" type="text" name="name">
+        <input placeholder="Seu telefone" type="telefone" name="telefone">
+        <textarea placeholder="Me conte seu problema" nome="duvida"></textarea>
+        <button>Pedir Orçamento</button>
+    </form>
+    <audio id="myAudio"  autoplay loop>
+        <source src="img/Super-Mario-Bros.mp3" type="audio/mp3">
+      </audio>
+    <style>
+        * {
     margin: 0;
     /* com esse tag geral aplicamos uma ordem pra definir direto a configurção inicial*/
     padding: 0;
@@ -65,6 +135,11 @@ video {
     min-width: 100%;
     position: fixed;
     top: 0;
+}
+
+h1 {
+    color: white; 
+    font-size: 80 px;
 }
 
 p {
@@ -218,14 +293,31 @@ textarea {
     }
 
 }
+    </style>
+    <script>
+        const form = document.querySelector(".formulario-fale-conosco")
+const mascara = document.querySelector(".mascara-formulario")
 
-/* 
-     inicial
-            top:30%;
-            left:-300px;
+function mostrarForm(){
+    form.style.left = "50%"
+    form.style.transform = "translatex(-50%)"
+    mascara.style.visibility = "visible"
+}
 
-     final
-            top:30%;
-            left: 50%;
-            transform: translateX(-50%);     
-*/
+function esconderForm() {
+    form.style.left = "-300px";
+    form.style.transform = "translatex(0)";
+    mascara.style.visibility = "hidden";
+}
+
+function ajustarVolume(volume) {
+    const audio = document.getElementById("myAudio");
+    audio.volume = volume;
+  }
+
+  // Ajuste de volume inicial
+  ajustarVolume(0.50); // Define o volume inicial para 20%
+    </script>
+</body>
+
+</html>
