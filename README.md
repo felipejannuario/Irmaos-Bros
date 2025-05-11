@@ -33,6 +33,9 @@ Este projeto é uma página fictícia e divertida inspirada nos encanadores mais
    ```
 3. Abra o arquivo `index.html` no navegador.
 
+4.  link do Site:
+   https://adorable-pasca-d3d6b0.netlify.app/
+
 ## 📩 Contato
 
 Gostou da ideia? Entre em contato!  
@@ -40,3 +43,4 @@ E-mail: **felipejanuarioalves@outlook.com**
 LinkedIn: [felipe-januario]([https://linkedin.com/in/seuperfil])
 link do projeto: 😊 [https://673fba2e766062a698d7356f--harmonious-puppy-459711.netlify.app/
 ](https://harmonious-puppy-459711.netlify.app/)
+
